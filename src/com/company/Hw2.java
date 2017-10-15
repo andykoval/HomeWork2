@@ -8,5 +8,6 @@ public class Hw2 {
         Hw2_Meth.task4();
         Hw2_Meth.task5();
         Hw2_Meth.task6(15,13,7);
+        Hw2_Meth.task7(200);
     }
 }

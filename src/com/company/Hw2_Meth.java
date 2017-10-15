@@ -59,4 +59,52 @@ public class Hw2_Meth {
     }
     System.out.println("Три числа по возрастанию: " + arr[0]+" "+arr[1]+" "+arr[2]);
     }
+    public static void task7(int n){
+        if (n<0&&n>28800)
+            System.out.println("Введите число между 0 и 28800");
+        else {
+            int nh;
+//            System.out.println(nh);
+            for (int i = n; i > 0; i-- ) {
+                nh = (int) (n / 60 / 60);
+                if (nh == 8){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 7){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 6){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 5){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 4){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 3){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 2){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh == 1){
+                    System.out.println(n+"\n"+"Осталось "+ nh + " часов");
+                    break;
+                }
+                if (nh <= 1) {
+                    System.out.println(n + "\n" + "Осталось менее часа");
+                    break;
+                }
+
+            }
+        }
+        }
 }
