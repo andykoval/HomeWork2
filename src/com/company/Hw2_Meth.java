@@ -107,4 +107,51 @@ public class Hw2_Meth {
             }
         }
         }
+
+// Циклы в Java
+    public static int task8(int n){
+        int fact = 1;
+        for (int i = 1; i<=n; i++){
+            fact *= i;
+        }
+    return fact;
+    }
+    public static void task9(int n){
+        System.out.print("Делитиели числа "+ n + ": " );
+        for (int i =1; i<=n; i++){
+            if((n%i)== 0) System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+    public static void task10(int n){
+        boolean b = true;
+        for (int i = 2; i<=Math.sqrt(n); i++){
+            if((n%i)== 0) b = false;
+        break;
+        }
+        if (b) System.out.println(n+ " - простое число");
+        else System.out.println(n+ " - составное число число");
+    }
+    public static void task11(){
+        int n = 0;
+        int [] arr = new int[11];
+        arr[0] = 1;
+        arr[1] = 1;
+        for (int i = 2; i <= 10; i++ ){
+           arr[i] = arr[i-1] + arr[i-2];
+           }
+        for (int i = 0; i <= 10; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+        }
+
+    public static int task12(int n){
+        int sum = 0;
+        for (int i = 0; n>0; i++){
+            sum += n%10;
+            n /= 10;
+        }
+        return sum;
+    }
+
 }
