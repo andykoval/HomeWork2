@@ -4,6 +4,7 @@ package com.company;
  * Created by andy on 15.10.2017.
  */
 public class Hw2_Meth {
+
     //   четное или нечетное чило
     public static void task1(int n) {
         if (n % 2 == 0)
@@ -11,11 +12,13 @@ public class Hw2_Meth {
         else
             System.out.println(n + " нечетное число");
     }
+
     // ближайшее к 10 число
     public static double task2(double m, double n) {
         if ((m - 10) > (n - 10)) return n;
         else return m;
     }
+
     public static void task4() {
         double n;
         for (int i = 0; ; i++) {
@@ -27,6 +30,7 @@ public class Hw2_Meth {
         else
             System.out.println("Число " + (int) n + " не попадает в диапазон между 25 и 100");
     }
+
     public static void task5() {
         int num, max = 0, n;
         n = (int) (Math.random() * 1000);
@@ -38,6 +42,7 @@ public class Hw2_Meth {
         }
         System.out.println("Число: " + n1 + " наибольшая цифра: " + max);
     }
+
     public static void task6(int a, int b, int c) {
 //        int min = a, mid = b, max = c;
         int temp;
@@ -56,6 +61,7 @@ public class Hw2_Meth {
         }
         System.out.println("Три числа по возрастанию: " + arr[0] + " " + arr[1] + " " + arr[2]);
     }
+
     public static void task7(int n) {
         if (n < 0 && n > 28800)
             System.out.println("Введите число между 0 и 28800");
@@ -104,6 +110,7 @@ public class Hw2_Meth {
             }
         }
     }
+
     // Циклы в Java
     public static int task8(int n) {
         int fact = 1;
@@ -112,6 +119,7 @@ public class Hw2_Meth {
         }
         return fact;
     }
+
     public static void task9(int n) {
         System.out.print("Делитиели числа " + n + ": ");
         for (int i = 1; i <= n; i++) {
@@ -119,6 +127,7 @@ public class Hw2_Meth {
         }
         System.out.println();
     }
+
     public static void task10(int n) {
         boolean b = true;
         for (int i = 2; i <= Math.sqrt(n); i++) {
@@ -128,6 +137,7 @@ public class Hw2_Meth {
         if (b) System.out.println(n + " - простое число");
         else System.out.println(n + " - составное число число");
     }
+
     //    Число Фибоначчи(ряд из 11)
     public static void task11() {
         int n = 0;
@@ -142,6 +152,7 @@ public class Hw2_Meth {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
+
     //  Сумма всех цифр введенного числа
     public static int task12(int n) {
         int sum = 0;
@@ -151,6 +162,7 @@ public class Hw2_Meth {
         }
         return sum;
     }
+
 	public static void task13(){
         int num = 0, count =0, t1, t2, sumT1=0, sumT2=0, d1, d2, d3;
         while(num<=999999){
@@ -173,6 +185,7 @@ public class Hw2_Meth {
         }
 	    System.out.println("Количество счастливых билетов в рулоне: "+ count);
     }
+
     public static int task14() {
         int count = 0;
         for (int i = 0; i < 50000; i++) {
@@ -180,6 +193,7 @@ public class Hw2_Meth {
         }
         return count;
     }
+
     //    Симметричное время
     public static void task15() {
         int count = 0;
@@ -203,6 +217,7 @@ public class Hw2_Meth {
         }
         System.out.println("Зеркальное время - количество повторений за сутки: " + count);
     }
+
 //    Исключение 4 и 13
     public static void task16(){
         int count =0;
