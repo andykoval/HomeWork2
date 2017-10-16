@@ -51,16 +51,17 @@ public class Hw2 {
         Hw2_Meth.task10(s3);
 //      Циклы 8
         Hw2_Meth.task11();
-
 //      Циклы 9
         System.out.print("Введите число : ");
         Scanner scn4 = new Scanner(System.in);
         int s4 = scn4.nextInt();
         System.out.println("Cумма цифр введенного числа: " + Hw2_Meth.task12(s4));
+//      Циклы 10
+        Hw2_Meth.task13();
 //      Циклы 11
         System.out.println("Количество появлений цифры 2 в числе 50000: " + Hw2_Meth.task14());
         Hw2_Meth.task15();
-//        Циклы 12
+//      Циклы 12
         Hw2_Meth.task16();
     }
 

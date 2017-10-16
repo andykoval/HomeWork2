@@ -4,7 +4,6 @@ package com.company;
  * Created by andy on 15.10.2017.
  */
 public class Hw2_Meth {
-
     //   четное или нечетное чило
     public static void task1(int n) {
         if (n % 2 == 0)
@@ -12,13 +11,11 @@ public class Hw2_Meth {
         else
             System.out.println(n + " нечетное число");
     }
-
     // ближайшее к 10 число
     public static double task2(double m, double n) {
         if ((m - 10) > (n - 10)) return n;
         else return m;
     }
-
     public static void task4() {
         double n;
         for (int i = 0; ; i++) {
@@ -30,7 +27,6 @@ public class Hw2_Meth {
         else
             System.out.println("Число " + (int) n + " не попадает в диапазон между 25 и 100");
     }
-
     public static void task5() {
         int num, max = 0, n;
         n = (int) (Math.random() * 1000);
@@ -42,7 +38,6 @@ public class Hw2_Meth {
         }
         System.out.println("Число: " + n1 + " наибольшая цифра: " + max);
     }
-
     public static void task6(int a, int b, int c) {
 //        int min = a, mid = b, max = c;
         int temp;
@@ -61,7 +56,6 @@ public class Hw2_Meth {
         }
         System.out.println("Три числа по возрастанию: " + arr[0] + " " + arr[1] + " " + arr[2]);
     }
-
     public static void task7(int n) {
         if (n < 0 && n > 28800)
             System.out.println("Введите число между 0 и 28800");
@@ -110,7 +104,6 @@ public class Hw2_Meth {
             }
         }
     }
-
     // Циклы в Java
     public static int task8(int n) {
         int fact = 1;
@@ -119,7 +112,6 @@ public class Hw2_Meth {
         }
         return fact;
     }
-
     public static void task9(int n) {
         System.out.print("Делитиели числа " + n + ": ");
         for (int i = 1; i <= n; i++) {
@@ -127,7 +119,6 @@ public class Hw2_Meth {
         }
         System.out.println();
     }
-
     public static void task10(int n) {
         boolean b = true;
         for (int i = 2; i <= Math.sqrt(n); i++) {
@@ -154,43 +145,34 @@ public class Hw2_Meth {
     //  Сумма всех цифр введенного числа
     public static int task12(int n) {
         int sum = 0;
-        for (int i = 0; n > 0; i++) {
+        for (int i = 0; n > 1; i++) {
             sum += n % 10;
             n /= 10;
         }
         return sum;
     }
-//    Счастливые билеты на трамвай
-//    public static int task13(){
-////        int [] Num1 = new int[1000];
-////        int [] Num2 = new int[1000];
-//        int sum = 0, n, sumNum1 = 0, sumNum2 = 0, countN1 =0, countN2 =0, int count =0;
-//        for (n=0; n<1000; n++) {
-//            for (int i = 0; n > 0; i++) {
-//                sumNum1 += n % 10;
-//                n /= 10;
-//            }
-//        }
-//        System.out.println(count);
-//        int sum = 0, sumNum1 = 0, sumNum2 = 0, countN1 =0, countN2 =0;
-//        for (int n = 0; n<1000000; n++){
-//            for (int j = 0; n>0; j++){
-//                if (countN1<=3){
-//                    countN1++;
-//                    sumNum1 += n%10;
-//                    n/=10;
-//                }
-//                if (countN1==3 && countN2<=3 ){
-//                    countN2++;
-//                    sumNum2 += n%10;
-//                    n/=10;
-//                }
-//
-//            }
-
-    //
-//
-//        return sum;
+	public static void task13(){
+        int num = 0, count =0, t1, t2, sumT1=0, sumT2=0, d1, d2, d3;
+        while(num<=999999){
+            num++;
+            t1 = num/1000;//первые три цыфры числа
+            t2 = num%1000;//последние три цифры числа
+            for(int i = 0 ; i < 3; i++){
+                d1 = t1/100;
+                d2 = (t1/10)%10;
+                d3 = t1%10;
+                sumT1 = d1 + d2 + d3;
+            }
+            for(int i = 0 ; i < 3; i++){
+                d1 = t2/100;
+                d2 = (t2/10)%10;
+                d3 = t2%10;
+                sumT2 = d1 + d2 + d3;
+            }
+            if(sumT2==sumT1) count++;
+        }
+	    System.out.println("Количество счастливых билетов в рулоне: "+ count);
+    }
     public static int task14() {
         int count = 0;
         for (int i = 0; i < 50000; i++) {
@@ -198,7 +180,6 @@ public class Hw2_Meth {
         }
         return count;
     }
-
     //    Симметричное время
     public static void task15() {
         int count = 0;
@@ -208,16 +189,12 @@ public class Hw2_Meth {
                 arrH[i] = String.valueOf(0) + String.valueOf(i);
             else arrH[i] = String.valueOf(i);
         }
-//        for (int i = 0; i < 24; i++)
-//            System.out.println(arrH[i]);
         String[] arrM = new String[60];
         for (int i = 0; i < 60; i++) {
             if (i <= 9)
                 arrM[i] = String.valueOf(0) + String.valueOf(i);
             else arrM[i] = String.valueOf(i);
         }
-//        for (int i = 0; i < 60; i++)
-//            System.out.println(arrM[i]);
         for (int i = 0; i < 24; i++) {
             for (int j = 0; j < 60; j++) {
                 if ((arrH[i].charAt(1) == arrM[j].charAt(0)) && (arrH[i].charAt(0) == arrM[j].charAt(1)))
