@@ -146,6 +146,7 @@ public class Hw2_Meth {
         for (int i = 2; i <= 10; i++) {
             arr[i] = arr[i - 1] + arr[i - 2];
         }
+        System.out.print("Последовательность Фибоначчи: ");
         for (int i = 0; i <= 10; i++)
             System.out.print(arr[i] + " ");
         System.out.println();
@@ -224,6 +225,14 @@ public class Hw2_Meth {
             }
         }
         System.out.println("Зеркальное время - количество повторений за сутки: " + count);
+    }
+//    Исключение 4 и 13
+    public static void task16(){
+        int count =0;
+        for (int n = 1; n<100000; n++){
+        if(String.valueOf(n).contains("4")||String.valueOf(n).contains("13")) count++;
+        }
+        System.out.println("Количество единиц техники содержащих в номере цифры 4 и 13: " + count);
     }
 }
 

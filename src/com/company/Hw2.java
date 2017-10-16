@@ -60,6 +60,8 @@ public class Hw2 {
 //      Циклы 11
         System.out.println("Количество появлений цифры 2 в числе 50000: " + Hw2_Meth.task14());
         Hw2_Meth.task15();
+//        Циклы 12
+        Hw2_Meth.task16();
     }
 
 }
