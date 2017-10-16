@@ -10,6 +10,8 @@ public class Hw2 {
 
         System.out.println("Ближайшее к 10 число из двух: " + Hw2_Meth.task2(23, 5.75));
 
+        Hw2_Meth.task3(1,3,-4);
+
         Hw2_Meth.task4();
 
 //      Ветвления в программе
