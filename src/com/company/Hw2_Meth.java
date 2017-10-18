@@ -18,8 +18,9 @@ public class Hw2_Meth {
         if ((m - 10) > (n - 10)) return n;
         else return m;
     }
+
     // вещественные корни квадратного уравнения
-    public static void task3(int a, int b, int c){
+    public static void task3(int a, int b, int c) {
         double D;
         D = b * b - 4 * a * c;
         if (D > 0) {
@@ -27,13 +28,11 @@ public class Hw2_Meth {
             x1 = (-b - Math.sqrt(D)) / (2 * a);
             x2 = (-b + Math.sqrt(D)) / (2 * a);
             System.out.println("Корни уравнения: x1 = " + x1 + ", x2 = " + x2);
-        }
-        else if (D == 0) {
+        } else if (D == 0) {
             double x;
             x = -b / (2 * a);
             System.out.println("Уравнение имеет единственный корень: x = " + x);
-        }
-        else {
+        } else {
             System.out.println("Уравнение не имеет корней!");
         }
     }
@@ -182,27 +181,27 @@ public class Hw2_Meth {
         return sum;
     }
 
-	public static void task13(){
-        int num = 0, count =0, t1, t2, sumT1=0, sumT2=0, d1, d2, d3;
-        while(num<=999999){
+    public static void task13() {
+        int num = 0, count = 0, t1, t2, sumT1 = 0, sumT2 = 0, d1, d2, d3;
+        while (num <= 999999) {
             num++;
-            t1 = num/1000;//первые три цыфры числа
-            t2 = num%1000;//последние три цифры числа
-            for(int i = 0 ; i < 3; i++){
-                d1 = t1/100;
-                d2 = (t1/10)%10;
-                d3 = t1%10;
+            t1 = num / 1000;//первые три цыфры числа
+            t2 = num % 1000;//последние три цифры числа
+            for (int i = 0; i < 3; i++) {
+                d1 = t1 / 100;
+                d2 = (t1 / 10) % 10;
+                d3 = t1 % 10;
                 sumT1 = d1 + d2 + d3;
             }
-            for(int i = 0 ; i < 3; i++){
-                d1 = t2/100;
-                d2 = (t2/10)%10;
-                d3 = t2%10;
+            for (int i = 0; i < 3; i++) {
+                d1 = t2 / 100;
+                d2 = (t2 / 10) % 10;
+                d3 = t2 % 10;
                 sumT2 = d1 + d2 + d3;
             }
-            if(sumT2==sumT1) count++;
+            if (sumT2 == sumT1) count++;
         }
-	    System.out.println("Количество счастливых билетов в рулоне: "+ count);
+        System.out.println("Количество счастливых билетов в рулоне: " + count);
     }
 
     public static int task14() {
@@ -237,11 +236,12 @@ public class Hw2_Meth {
         System.out.println("Зеркальное время - количество повторений за сутки: " + count);
     }
 
-//    Исключение 4 и 13
-    public static void task16(){
-        int count =0;
-        for (int n = 1; n<100000; n++){
-        if(String.valueOf(n).contains("4")||String.valueOf(n).contains("13")) count++;
+    //    Исключение 4 и 13
+    public static void task16() {
+        int count = 0;
+        for (int n = 1; n < 100000; n++) {
+            if (String.valueOf(n).contains("4")) count++;
+            if (String.valueOf(n).contains("13")) count++;
         }
         System.out.println("Количество единиц техники содержащих в номере цифры 4 и 13: " + count);
     }
